@@ -1,0 +1,10 @@
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast text-white" role="alert" aria-live="assertive" aria-atomic="true"
+    [class.show]="isVisible" [class.hide]="!isVisible"
+    [class]="{'bg-danger': messageType === 'danger', 'bg-success': messageType === 'success', 'bg-warning': messageType === 'warning'}">
+    <div class="toast-body">
+      <i class="bi bi-check-circle"></i>
+      {{ message }}
+    </div>
+  </div>
+</div>
